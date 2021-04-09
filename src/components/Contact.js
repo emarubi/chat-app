@@ -10,7 +10,7 @@ function Contact(props) {
             <div>
                 <h4 className="name">{props.name}</h4>
                 <div className="status">
-                    <img src="" alt="" className={props.online? "status-online" : "status-offline" }/>
+                    <span className={props.online? "status-online" : "status-offline" }/>
                     <span className=".status-text">{props.online? 'online' : 'offline'}</span>
                 </div>
             </div>

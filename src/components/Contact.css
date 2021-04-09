@@ -21,17 +21,11 @@
     color: #eee;
   }
 
-  /* .Contact .status {
-      display: flex;
-      flex-direction: row;
-  } */
-  
   /* Status text */
   .Contact .status .status-text {
     color: #999;
     margin: 0;
     display: inline-block;
-    vertical-align: middle;
   }
   
   /* Status (rounded&colored indicator) */
@@ -42,8 +36,6 @@
     width: 8px;
     height: 8px;
     margin-right: 6px;
-    margin-top: 0.2em;
-    vertical-align: middle;
   }
   
   .Contact .status .status-online {
