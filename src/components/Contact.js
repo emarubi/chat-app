@@ -12,6 +12,11 @@ class Contact extends Component {
         }
     }
 
+    eventHandler = (event) => {
+        const newOnline = !this.state.online;
+        this.setState({ online: newOnline});
+    }
+
     render() {
         return (
             <div className="Contact">
@@ -19,7 +24,7 @@ class Contact extends Component {
             <div>
                 <h4 className="name">{this.props.name}</h4>
                 <div className="status">
-                    <span className={this.state.online? "status-online" : "status-offline" }/>
+                    <span className={this.state.online? "status-online" : "status-offline" } onClick={this.eventHandler}/>
                     <span className=".status-text">{this.state.online? 'online' : 'offline'}</span>
                 </div>
             </div>
@@ -27,22 +32,6 @@ class Contact extends Component {
         )
     }
 }
-
-// function Contact(props) {
-//     return (
-//         <div className="Contact">
-//             <img src={props.avatar} alt={props.name} className="avatar" />
-//             <div>
-//                 <h4 className="name">{props.name}</h4>
-//                 <div className="status">
-//                     <span className={props.online? "status-online" : "status-offline" }/>
-//                     <span className=".status-text">{props.online? 'online' : 'offline'}</span>
-//                 </div>
-//             </div>
-//         </div>
-        
-//     )
-// }
 
 Contact.propTypes = {
     avatar: PropTypes.string.isRequired,
